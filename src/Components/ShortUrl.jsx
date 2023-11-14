@@ -14,7 +14,7 @@ const ShortUrl = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:8080/shorten',
+        'https://kind-gray-elk-sari.cyclic.app/shorten',
         {
           originalUrl: originalUrl,
           customUrl: customUrl,
@@ -44,7 +44,7 @@ const ShortUrl = () => {
     e.preventDefault();
     console.log(shortID)
     try {
-     await axios.get(`http://localhost:8080/geturl/${shortID}`)
+     await axios.get(`https://kind-gray-elk-sari.cyclic.app/geturl/${shortID}`)
       .then(res=>{
         window.open(res.data.url)
       })
