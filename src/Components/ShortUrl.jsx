@@ -66,12 +66,12 @@ const ShortUrl = () => {
         </label>
         <br />
         <label>
-          Custom URL (optional):
+          Custom URL:
           <input type="text" value={customUrl} onChange={(e) => setCustomUrl(e.target.value)} />
         </label>
         <br />
         <label>
-          Expiration Time (in minutes, 0 for never):
+          Expires in:
           <input type="number" value={expirationTime} onChange={(e) => setExpirationTime(e.target.value)} />
         </label>
         <br />
@@ -79,7 +79,7 @@ const ShortUrl = () => {
       </form>
       {shortUrl && (
         <div>
-          <p>Shortened URL:</p>
+          <p>Short URL:</p>
           <p onClick={handleUrl} style={{ cursor: 'pointer', color: 'blue', textDecoration: 'underline' }}>
             {shortUrl}
           </p>
