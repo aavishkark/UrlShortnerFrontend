@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import "./shorturl.css"
 const ShortUrl = () => {
   const [originalUrl, setOriginalUrl] = useState('');
   const [customUrl, setCustomUrl] = useState('');
@@ -57,7 +57,7 @@ const ShortUrl = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>URL Shortener</h1>
       <form onSubmit={handleSubmit}>
         <label>
